@@ -1,0 +1,83 @@
+### Requisição GET
+GET http://localhost:5073 
+
+
+//LIVROS
+
+### Requisição GET
+GET http://localhost:5073/livros
+
+### Requisicao POST
+POST http://localhost:5073/livros
+Content-Type: application/json
+
+{
+
+}
+
+### Requisicao PUT
+PUT http://localhost:5073/livros/
+Content-Type: application/json
+
+{
+
+}
+
+### Requisicao DELETE
+DELETE http://localhost:5073/livros/
+
+
+
+
+//USUARIOS
+
+### Requisição GET
+GET http://localhost:5073/usuarios
+
+### Requisicao POST
+POST http://localhost:5073/usuarios
+Content-Type: application/json
+
+{
+
+}
+
+### Requisicao PUT
+PUT http://localhost:5073/usuarios/
+Content-Type: application/json
+
+{
+
+}
+
+### Requisicao DELETE
+DELETE http://localhost:5073/usuarios/
+
+
+
+//EMPRESTIMOS
+
+### Requisição GET
+GET http://localhost:5073/emprestimos
+
+### Requisicao POST
+POST http://localhost:5073/emprestimos
+Content-Type: application/json
+
+{
+
+}
+
+### Requisicao PUT
+PUT http://localhost:5073/emprestimos/
+Content-Type: application/json
+
+{
+
+}
+
+### Requisicao DELETE
+DELETE http://localhost:5073/emprestimos/
+
+
+
