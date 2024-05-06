@@ -1,23 +1,23 @@
 using Microsoft.EntityFrameworkCore;
 
-public static class EmprestimosApi
+public static class EmprestimosAPI
 {
 
-    public static void MapEmpretismoAPI(this WebApplication app)
+    public static void MapEmprestimosAPI(this WebApplication app)
     {
 
         var group = app.MapGroup("/emprestimos");
 
 
         group.MapGet("/", async (BibliotecaContext db) =>
+        
         await db.Emprestimos.ToListAsync()
         );
 
         group.MapGet("/{id}", async (int id, BibliotecaContext db) =>
-        await db.Emprestimos.FindAsync(id)
-        is Emprestimo emprestimo
-        ? Results.Ok(emprestimo)
-        : Results.NotFound()
+        
+        await db.Emprestimos.FindAsync(id) is Emprestimo emprestimo ? 
+        Results.Ok(emprestimo) : Results.NotFound()
         );
 
         group.MapPost("/", async (Emprestimo emprestimo, BibliotecaContext db) =>

@@ -7,7 +7,7 @@ public static class LivrosAPI
     {
 
         var group = app.MapGroup("/livros");
-
+        
 
         group.MapGet("/", async (BibliotecaContext db) =>
         await db.Livros.ToListAsync()
@@ -25,12 +25,15 @@ public static class LivrosAPI
             db.Livros.Add(Livro);
             await db.SaveChangesAsync();
             return Results.Created($"/Livros/{Livro.Id}", Livro);
+
         });
 
         group.MapPut("/{id}", async (int id, Livro LivroAlterado, BibliotecaContext db) =>
         {
             var Livro = await db.Livros.FindAsync(id);
-            if (Livro is null) return Results.NotFound();
+            if (Livro is null) {
+                return Results.NotFound();
+            }
 
             Livro.Id = LivroAlterado.Id;
             Livro.Nome = LivroAlterado.Nome;
@@ -40,6 +43,7 @@ public static class LivrosAPI
 
             await db.SaveChangesAsync();
             return Results.NoContent();
+
         });
 
         group.MapDelete("/{id}", async (int id, BibliotecaContext db) =>
@@ -51,6 +55,7 @@ public static class LivrosAPI
                 return Results.NoContent();
             }
             return Results.NotFound();
+
         });
 
     }

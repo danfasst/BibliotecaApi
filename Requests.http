@@ -16,11 +16,11 @@ Content-Type: application/json
 }
 
 ### Requisicao PUT
-PUT http://localhost:5073/livros/
+PUT http://localhost:5073/livros/1
 Content-Type: application/json
 
 {
-
+    
 }
 
 ### Requisicao DELETE
@@ -78,6 +78,32 @@ Content-Type: application/json
 
 ### Requisicao DELETE
 DELETE http://localhost:5073/emprestimos/
+
+
+// EDITORAS
+
+
+### Requisição GET
+GET http://localhost:5073/editoras
+
+### Requisicao POST
+POST http://localhost:5073/editoras
+Content-Type: application/json
+
+{
+
+}
+
+### Requisicao PUT
+PUT http://localhost:5073/editoras/
+Content-Type: application/json
+
+{
+
+}
+
+### Requisicao DELETE
+DELETE http://localhost:5073/editoras/
 
 
 

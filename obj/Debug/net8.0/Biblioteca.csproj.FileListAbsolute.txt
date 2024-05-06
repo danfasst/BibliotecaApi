@@ -124,3 +124,4 @@ C:\_WorkSpace\CSharp\Biblioteca\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.
 C:\_WorkSpace\CSharp\Biblioteca\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\_WorkSpace\CSharp\Biblioteca\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\_WorkSpace\CSharp\Biblioteca\obj\Debug\net8.0\Biblioteca.MvcApplicationPartsAssemblyInfo.cs
+C:\_WorkSpace\CSharp\Biblioteca\obj\Debug\net8.0\Biblioteca.sourcelink.json

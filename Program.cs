@@ -15,16 +15,16 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-//SWAGGER BIBLIOTECA http://localhost:5073/swagger/index.html
+// http://localhost:5073/swagger/index.html
 
 app.MapGet("/", () => "Biblioteca API");
-
-
 
 app.MapLivrosAPI();
 
 app.MapUsuariosAPI();
 
-app.MapEmpretismoAPI();
+app.MapEmprestimosAPI();
+
+app.MapEditorasAPI();
 
 app.Run();
