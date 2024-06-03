@@ -1,0 +1,28 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+div {
+    max-width: 700px;
+    margin: auto;
+}
+
+form > * {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+}
