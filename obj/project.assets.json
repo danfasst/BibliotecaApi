@@ -4139,11 +4139,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\_WorkSpace\\CSharp\\Biblioteca\\Biblioteca.csproj",
+      "projectUniqueName": "C:\\_WorkSpace\\CSharp\\bibliotecaapi - Copia\\Biblioteca.csproj",
       "projectName": "Biblioteca",
-      "projectPath": "C:\\_WorkSpace\\CSharp\\Biblioteca\\Biblioteca.csproj",
+      "projectPath": "C:\\_WorkSpace\\CSharp\\bibliotecaapi - Copia\\Biblioteca.csproj",
       "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-      "outputPath": "C:\\_WorkSpace\\CSharp\\Biblioteca\\obj\\",
+      "outputPath": "C:\\_WorkSpace\\CSharp\\bibliotecaapi - Copia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config"

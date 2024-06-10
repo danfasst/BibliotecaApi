@@ -8,4 +8,7 @@ public class Usuario
     public string? Telefone { get; set; }
     public string? DataNascimento { get; set; }
 
+    //um para muitos (emprestimo)
+    public List<Emprestimo>? Emprestimos { get; set; }
+
 }

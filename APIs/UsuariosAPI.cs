@@ -9,22 +9,22 @@ public static class UsuariosAPI
         var group = app.MapGroup("/usuarios");
 
 
-        group.MapGet("/", async (BibliotecaContext db) =>
-        await db.Usuarios.ToListAsync()
+        group.MapGet("/", async (BibliotecaContext db) => 
+        {
+            return await db.Usuarios.ToListAsync();
+        }
+
         );
 
         group.MapGet("/{id}", async (int id, BibliotecaContext db) =>
-        await db.Usuarios.FindAsync(id)
-        is Usuario Usuario
-        ? Results.Ok(Usuario)
-        : Results.NotFound()
+            await db.Usuarios.FindAsync(id) is Usuario Usuario ? Results.Ok(Usuario) : Results.NotFound()
         );
 
-        group.MapPost("/", async (Usuario Usuario, BibliotecaContext db) =>
+        group.MapPost("/", async (Usuario usuario, BibliotecaContext db) =>
         {
-            db.Usuarios.Add(Usuario);
+            db.Usuarios.Add(usuario);
             await db.SaveChangesAsync();
-            return Results.Created($"/Usuarios/{Usuario.Id}", Usuario);
+            return Results.Created($"/Usuarios/{usuario.Id}", usuario);
         });
 
         group.MapPut("/{id}", async (int id, Usuario UsuarioAlterado, BibliotecaContext db) =>

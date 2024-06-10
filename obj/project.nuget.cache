@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HpWOeV0AoWv4nKKjdYtqd6TymbFrWp1XUYxGmsrOWoliDI5j3gXPV3GC13rbGYwrczCExtzUQxvZocd2bsx/qw==",
+  "dgSpecHash": "UlEJWGDaqCH6RKYjsY8j1mF9iMy4KJbqGYhKl7ILaL8WZNnT0YazaYJqil7dY7SXTKeyJRyE7VRCyycAvbRdXg==",
   "success": true,
-  "projectFilePath": "C:\\_WorkSpace\\CSharp\\Biblioteca\\Biblioteca.csproj",
+  "projectFilePath": "C:\\_WorkSpace\\CSharp\\bibliotecaapi - Copia\\Biblioteca.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danie\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

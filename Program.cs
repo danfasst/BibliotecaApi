@@ -2,6 +2,10 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//Configuração CORS
+builder.Services.AddCors();
+
+
 //Configuração Swagger no builder
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -10,6 +14,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BibliotecaContext>();
 
 var app = builder.Build();
+
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+);
 
 //Configuração Swagger no app
 app.UseSwagger();
