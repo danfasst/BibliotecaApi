@@ -9,8 +9,5 @@ public class Livro
 
     //um para muitos (editora)
     public Editora? Editora { get; set; }
-    
-    //muitos para muitos (emprestimos)
-    public List<Emprestimo>? Emprestimos { get; set; }
 
 }

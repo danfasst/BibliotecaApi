@@ -22,7 +22,6 @@ public static class LivrosAPI
 
         group.MapPost("/", async (Livro livro, BibliotecaContext db) =>
         {
-            livro.Emprestimos = await SalvarEmprestimos(livro, db);
             livro.Editora = await SalvarEditora(livro, db);
 
             db.Livros.Add(livro);
@@ -48,32 +47,6 @@ public static class LivrosAPI
             return editoraRetorno;
         }
 
-        async Task<List<Emprestimo>> SalvarEmprestimos(Livro livro, BibliotecaContext db)
-        {
-            List<Emprestimo> emprestimos = new();
-            if (livro is not null && livro.Emprestimos is not null
-                && livro.Emprestimos.Count > 0)
-            {
-
-                foreach (var emprestimo in livro.Emprestimos)
-                {
-                    if (emprestimo.Id > 0)
-                    {
-                        var dExistente = await db.Emprestimos.FindAsync(emprestimo.Id);
-                        if (dExistente is not null)
-                        {
-                            emprestimos.Add(dExistente);
-                        }
-                    }
-                    else
-                    {
-                        emprestimos.Add(emprestimo);
-                    }
-                }
-            }
-            return emprestimos;
-        }
-
         group.MapPut("/{id}", async (int id, Livro LivroAlterado, BibliotecaContext db) =>
         {
             var livro = await db.Livros.FindAsync(id);
@@ -88,7 +61,6 @@ public static class LivrosAPI
             livro.AnoPublicado = LivroAlterado.AnoPublicado;
             livro.Categoria = LivroAlterado.Categoria;
 
-            livro.Emprestimos = await SalvarEmprestimos(livro, db);
             livro.Editora = await SalvarEditora(livro, db);
 
             await db.SaveChangesAsync();

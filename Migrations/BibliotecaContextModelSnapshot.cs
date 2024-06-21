@@ -44,29 +44,12 @@ namespace Biblioteca.Migrations
                     b.Property<string>("DataEmprestimo")
                         .HasColumnType("longtext");
 
-                    b.Property<int?>("UsuarioId")
-                        .HasColumnType("int");
+                    b.Property<string>("Livro")
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UsuarioId");
-
                     b.ToTable("Emprestimos");
-                });
-
-            modelBuilder.Entity("EmprestimoLivro", b =>
-                {
-                    b.Property<int>("EmprestimosId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LivrosId")
-                        .HasColumnType("int");
-
-                    b.HasKey("EmprestimosId", "LivrosId");
-
-                    b.HasIndex("LivrosId");
-
-                    b.ToTable("EmprestimoLivro");
                 });
 
             modelBuilder.Entity("Livro", b =>
@@ -123,30 +106,6 @@ namespace Biblioteca.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("Emprestimo", b =>
-                {
-                    b.HasOne("Usuario", "Usuario")
-                        .WithMany("Emprestimos")
-                        .HasForeignKey("UsuarioId");
-
-                    b.Navigation("Usuario");
-                });
-
-            modelBuilder.Entity("EmprestimoLivro", b =>
-                {
-                    b.HasOne("Emprestimo", null)
-                        .WithMany()
-                        .HasForeignKey("EmprestimosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Livro", null)
-                        .WithMany()
-                        .HasForeignKey("LivrosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Livro", b =>
                 {
                     b.HasOne("Editora", "Editora")
@@ -159,11 +118,6 @@ namespace Biblioteca.Migrations
             modelBuilder.Entity("Editora", b =>
                 {
                     b.Navigation("Livros");
-                });
-
-            modelBuilder.Entity("Usuario", b =>
-                {
-                    b.Navigation("Emprestimos");
                 });
 #pragma warning restore 612, 618
         }

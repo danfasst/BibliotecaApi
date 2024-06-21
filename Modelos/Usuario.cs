@@ -7,8 +7,5 @@ public class Usuario
     public string? Email { get; set; }
     public string? Telefone { get; set; }
     public string? DataNascimento { get; set; }
-
-    //um para muitos (emprestimo)
-    public List<Emprestimo>? Emprestimos { get; set; }
-
+    
 }

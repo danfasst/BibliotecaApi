@@ -10,7 +10,7 @@ public class BibliotecaContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder builder)
     {
-        builder.UseMySQL("server=localhost;port=3306;database=biblioteca;user=root;password=1234");
+        builder.UseMySQL("server=localhost;port=3306;database=novaBiblioteca;user=root;password=1234");
     }
 
 }
